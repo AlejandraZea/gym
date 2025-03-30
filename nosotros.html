@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nosotros</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <!-- Iconos de Material Design -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<style>
+    body {
+        font-family: 'Roboto', 'Anton', sans-serif;
+        background-color: #1977b3;
+        min-height: 150vh;
+
+    }
+
+    h2 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 2rem;
+        color: #ffff;
+        font-size: 2.5rem;
+    }
+
+    h3 {
+        font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+        font-size: 2rem;
+        color: #000000;
+        font-size: 2.5rem;
+    }
+
+    nav {
+
+        display: contents;
+        color: #fff;
+        background-color: #1977b3;
+        width: 100%;
+        height: 56px;
+        line-height: 56px;
+        padding: 10px 20px;
+
+    }
+
+    nav ul {
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: flex-end;
+        background-color: #1977b3;
+
+    }
+
+    nav ul li a {
+        color: #007BFF;
+        background-color: #1977b3;
+    }
+
+    .carousel .carousel-item {
+        width: 300px;
+        height: 450px;
+    }
+
+    .card-small {
+        height: 300px;
+        /* Altura fija */
+        display: flex;
+        flex-direction: column;
+    }
+
+    .card-content-overflow {
+        flex-grow: 1;
+        overflow: auto;
+        /* Habilita scroll si el contenido es largo */
+    }
+
+    .card-large {
+        display: flex;
+        height: 300px;
+        /* Altura fija */
+    }
+
+    .card-large .left-side {
+        width: 40%;
+        /* 40% para imagen y título */
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        border-right: 2px solid #ddd;
+        /* Línea divisoria */
+    }
+
+    .card-large .right-side {
+        width: 60%;
+        /* 60% para el texto */
+        padding: 20px;
+        overflow: auto;
+        /* Habilita scroll si el contenido es largo */
+    }
+
+    .card-large img {
+        width: 100%;
+        max-height: 150px;
+        object-fit: cover;
+        border-radius: 10px;
+    }
+
+    .noticias-container {
+        width: 250px;
+        background: #fff;
+        padding: 10px;
+        border-radius: 8px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        font-family: Arial, sans-serif;
+    }
+
+    .noticias-title {
+        text-align: center;
+        margin-bottom: 10px;
+        color: #333;
+        font-size: 18px;
+        font-weight: bold;
+    }
+
+    .noticia {
+        margin-bottom: 10px;
+    }
+
+    .noticia h4 {
+        margin: 5px 0;
+        font-size: 16px;
+        color: #222;
+    }
+
+    .noticia p {
+        font-size: 14px;
+        color: #555;
+    }
+
+    hr {
+        border: none;
+        height: 1px;
+        background: #ddd;
+        margin: 8px 0;
+    }
+</style>
+
+<body>
+
+    <div
+        style="background-color: #1977b3; display: flex; justify-content: space-between; align-items: center; padding: 10px 20px; border-bottom: 1px solid #ffff; ">
+        <img src="/img/gym_logo.png" alt="LOGO" style="height: 55px;">
+        <ul style="list-style: none; margin: 0; padding: 0; display: flex;">
+            <li style="margin-left: 550px;"><a href="index.html" style="text-decoration: none; color: rgb(255, 255, 255);"><b>Home</b></a>
+            </li>
+            <li style="margin-left: 20px;"><a href="sucursales.html"
+                    style="text-decoration: none; color: rgb(255, 255, 255);"><b>Sucursales</b></a></li>
+            <li style="margin-left: 20px;"><a href="actividades.html"
+                    style="text-decoration: none; color: rgb(255, 255, 255);"><b>Actividades</b></a></li>
+            <li style="margin-left: 20px;"><a href="nosotros.html"
+                    style="text-decoration: none; color: rgb(255, 255, 255);"><b>Nosotros</b></a></li>
+            <li style="margin-left: 20px;"><a href="contacto.html"
+                    style="text-decoration: none; color: rgb(255, 255, 255);"><b>Contacto</b></a></li>
+        </ul>
+    </div>
+
+
+    <!-- Menú lateral para móvil -->
+    <ul class="sidenav" id="mobile-menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#">Servicios</a></li>
+        <li><a href="#">Contacto</a></li>
+    </ul>
+
+
+
+    <!-- Sección de Dos Cards -->
+    <div class="container">
+        <div class="row">
+            <!-- Card Grande (2/3) -->
+            <div class="col s12 m8">
+                <div class="card card-large">
+                    <div class="left-side">
+                        <h3>Nosotros</h3>
+                        <img src="img/gym_logo.png" alt="Imagen">
+                    </div>
+                    <div class="right-side">
+                        <p>
+                            Somos un gimnasio comprometido con la excelencia en la atención al cliente,
+                            ofreciendo servicios de alta calidad en entornos seguros, controlados y saludables.
+                            Nuestra misión es proporcionar a nuestros clientes una experiencia integral que les
+                            permita alcanzar sus objetivos de bienestar y desarrollo físico. Contamos con una
+                            amplia variedad de disciplinas diseñadas para adaptarse a diferentes niveles de
+                            experiencia y necesidades individuales. A través de programas estructurados y
+                            rutinas personalizadas, brindamos una guía confiable que ayuda a nuestros usuarios
+                            a mejorar su condición física, fortalecer su cuerpo y adoptar hábitos saludables
+                            que contribuyan a su bienestar general. En nuestro gimnasio, no solo fomentamos
+                            la actividad física, sino también un estilo de vida equilibrado, promoviendo el
+                            compromiso, la constancia y la superación personal en un ambiente motivador y
+                            profesional.
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card Pequeña (1/3) -->
+            <div class="col s12 m4">
+                <div class="card card-small">
+                    <div class="card-content">
+                        <span class="card-title"><h3>Noticias</h3></span>
+                    </div>
+                    <div class="card-content card-content-overflow">
+                        <div className="noticias-container">
+                            <div className="noticia">
+                                <h5>Nueva sucursal</h5>
+                                <p>Nueva sucursal en camargo te esperamos</p>
+                            </div>
+                            <hr />
+
+                            <div className="noticia">
+                                <h5>Nuevo horario vespertino para pilates</h5>
+                                <p>Nuevo horario bespertino para clases de pilates de 7-8 </p>
+                            </div>
+                            <hr />
+
+                            <div className="noticia">
+                                <h5>Nueva promocion de 2 por uno a nuevo ingreso</h5>
+                                <p>Clientes interesados en llevar a sus amigos al gimnacio.</p>
+                            </div>
+                            <hr />
+
+                            <div className="noticia">
+                                <h5>Conoce a Jack!</h5>
+                                <p>Tenemos un nuevo integrante en nuestro equipo. Jack te ayudara a cumplir los retos
+                                    que te propongas!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Carrusel de Cards -->
+    <div class="container">
+        <h2 class="center">Reseñas</h2>
+        <div class="carousel">
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/img/per1.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Carlos Méndez</span>
+                        <p>Excelente gimnasio, con entrenadores muy atentos y
+                            un ambiente motivador. ¡Definitivamente el mejor lugar para entrenar</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/img/per2.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Mariana López</span>
+                        <p>Las instalaciones son impecables y cuentan con todo el equipo necesario.
+                            Además, la variedad de disciplinas es increíble. ¡Muy recomendado!</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/img/per3.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Andrés Ramírez</span>
+                        <p>Me encanta la atención personalizada y las rutinas bien estructuradas.
+                            He visto grandes avances en mi condición física desde que me uní</p>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="/img/per4.jpg">
+                    </div>
+                    <div class="card-content">
+                        <span class="card-title">Laura Castillo</span>
+                        <p>Un lugar ideal para entrenar con seguridad y comodidad.
+                            Siempre hay un ambiente positivo y mucha energía.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Gym - Marca Registrada </p>
+    </footer>
+
+    <!-- Materialize JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            M.Sidenav.init(document.querySelectorAll('.sidenav'));
+            M.Carousel.init(document.querySelectorAll('.carousel'), {
+                fullWidth: false,
+                indicators: true
+            });
+        });
+
+    </script>
+    <script>
+        // Cargar el header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>

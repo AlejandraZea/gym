@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Roboto+Condensed:wght@300;400;700&family=Roboto+Flex:wght@100;300;400;700&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <script type="module">
+        import '@material/web/all.js';
+        import { styles as typescaleStyles } from '@material/web/typography/md-typescale-styles.js';
+
+        document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+    </script>
+
+    <!-- Material Web -->
+    <script type="module" src="https://unpkg.com/@material/web/all.js"></script>
+
+    <!-- SwiperJS (para el carrusel) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+
+    <style>
+        body {
+            font-family: 'Roboto', 'Anton', sans-serif;
+            background-color: #1977b3;
+            margin: 0;
+            padding: 0;
+            flex-direction: column;
+            align-items: center;
+            justify-content: auto;
+            min-height: 160vh;
+            overflow-y: auto;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+            text-align: center;
+        }
+
+        h1 {
+            font-family: 'Roboto Flex', sans-serif;
+        }
+
+        h2 {
+            font-family: 'Anton', sans-serif;
+            font-size: 2rem;
+        }
+
+        p {
+            font-family: 'Roboto Condensed', sans-serif;
+        }
+
+        /* Carrusel */
+        .swiper {
+            width: auto !important;
+            height: 70vh;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .swiper-slide {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+
+        .swiper-slide img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .caption {
+            position: absolute;
+            bottom: 50px;
+            background: rgba(0, 0, 0, 0.5);
+            color: #FFFF;
+            padding: 10px 15px;
+            border-radius: 8px;
+            font-size: 1.5rem;
+        }
+
+        /* Sección de Promociones */
+        .promociones-container {
+            margin-top: 50px;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .tarjetas {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .card {
+            width: 350px;
+            padding: 16px;
+            text-align: center;
+            background: #ffc33d;
+            border-radius: 12px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilo de la lista de íconos */
+        .icon-list {
+            list-style: none;
+            padding: 0;
+            text-align: left;
+        }
+
+        .icon-list li {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 16px;
+            color: black;
+            margin: 4px 0;
+        }
+
+        /* Estilo de los íconos de Material */
+        md-icon {
+            color: #007bff;
+            font-size: 20px;
+        }
+
+        /* Estilo de los iconos de Material */
+        .material-icons {
+            font-size: 36px;
+            /* Tamaño por defecto */
+            color: #007bff;
+            /* Color azul */
+        }
+
+        .material-icons.large {
+            font-size: 64px;
+            /* Íconos más grandes */
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header"></div>
+    <!-- Sección de Promociones -->
+    <section class="promociones-container">
+        <h2 class="text-white">SUCURSALES</h2>
+        <p class="text-white">Conoce nuestras sucursales</p>
+
+        <div class="tarjetas">
+            <div class="card">
+                <h3 class="text-dark">NORTE</h3>
+                <ul class="icon-list">
+                    <li><span class="material-icons">location_on</span> Octavio Paz 169, Complejo Industrial Chihuahua, 31136 Chihuahua, Chih.</li>
+                    <li><span class="material-icons">contact_phone</span> +52 (614)483 24 05</li>
+                    <li><span class="material-icons">schedule</span>  Lunes a Viernes:
+                        6AM - 10PM </br>                     
+                        Sábados: 8AM -3PM</br>  
+                        Domingos: Cerrado</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="text-dark">CENTRO</h3>
+                <ul class="icon-list">
+                    <li><span class="material-icons">location_on</span> C. Progreso 81, San Pedro, Zona Centro II, 31000 Chihuahua, Chih.</li>
+                    <li><span class="material-icons">contact_phone</span> +52 (614)177 79 76</li>
+                    <li><span class="material-icons">schedule</span> Lunes a Viernes:
+                        8AM - 11PM </br>                     
+                        Sábados: 8AM -11PM</br>  
+                        Domingos: 8 AM 3PM</li>
+                </ul>
+            </div>
+            <div class="card">
+                <h3 class="text-dark">SUR</h3>
+                <ul class="icon-list">
+                    <li><span class="material-icons">location_on</span> Perif. de la Juventud 3301 Col. Puerta de Hierro, 31207 Chihuahua, Chih.</li>
+                    <li><span class="material-icons">contact_phone</span>+52 (614)306 33 97</li>
+                    <li><span class="material-icons">schedule</span> Lunes a Viernes:
+                        5AM - 10:30PM </br>                     
+                        Sábados: 7AM -10PM</br>  
+                        Domingos: 8 AM 2PM
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <h1 class="text-white">Galerías</h1>
+        <p class="text-white">Conoce nuestras instalaciones</p>
+    </div>
+
+    <!-- Carrusel -->
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="img/galerias/centro1.jpg" alt="Imagen 1">
+                <div class="caption">Sucursal Centro</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/galerias/spining2.jpg" alt="Imagen 2">
+                <div class="caption">Sucursal Sur</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/galerias/centro2.jpg" alt="Imagen 1">
+                <div class="caption">Sucursal Centro</div>
+            </div>            
+            <div class="swiper-slide">
+                <img src="img/galerias/sur1.jpg" alt="Imagen 2">
+                <div class="caption">Sucursal Sur</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/galerias/spining.jpg" alt="Imagen 2">
+                <div class="caption">Sucursal Sur</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/galerias/sur2.jpg" alt="Imagen 2">
+                <div class="caption">Sucursal Sur</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/galerias/norte1.jpg" alt="Imagen 3">
+                <div class="caption">Sucursal Norte</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/galerias/spining3.jpg" alt="Imagen 2">
+                <div class="caption">Sucursal Sur</div>
+            </div>
+            <div class="swiper-slide">
+                <img src="img/galerias/norte2.webp" alt="Imagen 3">
+                <div class="caption">Sucursal Norte</div>
+            </div>
+        </div>
+
+        <!-- Botones de navegación -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- Paginación -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Tu Empresa</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            loop: true,
+            autoplay: { delay: 3000 },
+            navigation: { nextEl: '.swiper-button-next', prevEl: '.swiper-button-prev' },
+            pagination: { el: '.swiper-pagination', clickable: true }
+        });
+    </script>
+    <script src="script.js"></script>
+    <script>
+        // Cargar el header
+        fetch('header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

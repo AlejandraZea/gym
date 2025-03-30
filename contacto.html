@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <script type="module">
+    import "@material/web/all.js";
+    import { styles as typescaleStyles } from "@material/web/typography/md-typescale-styles.js";
+
+    document.adoptedStyleSheets.push(typescaleStyles.styleSheet);
+  </script>
+
+  <script type="module" src="https://unpkg.com/@material/web/all.js"></script>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+        Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+        sans-serif;
+      background-color: #1977b3;
+      color: black;
+      padding: 0;
+      min-height: 130vh;
+    }
+
+    h2 {
+      color: white;
+    }
+
+    /* Contacto y Visítanos */
+    .contacto-visitanos {
+      display: flex;
+      justify-content: space-between;
+      padding: 2rem;
+      background-color: #004a7a;
+      flex-wrap: wrap;
+      color: white;
+    }
+
+    .contacto,
+    .visitanos {
+      flex: 1 1 45%;
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .contacto h2,
+    .visitanos h2 {
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .contact-list {
+      list-style: none;
+    }
+
+    .contact-list li {
+      display: flex;
+      align-items: center;
+      margin-bottom: 0.7rem;
+      background-color: #eba200;
+    }
+
+    .contact-list .material-icons {
+      margin-right: 0.8rem;
+      background-color: #ffc33d;
+      padding: 0.5rem;
+      color: #0D3550;
+      width: 9%;
+    }
+
+    .contact-item {
+      color: #0D3550;
+      padding: 0.6rem 1rem;
+      border-radius: 4px;
+      flex: 1;
+    }
+
+    .visitanos {
+      text-align: center;
+      margin-top: 40px;
+    }
+
+    .location {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .locations {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+      flex-wrap: wrap;
+    }
+
+    .location-name {
+      margin-top: 8px;
+      font-size: 14px;
+      font-weight: 500;
+      color: white;
+    }
+
+    .location-box {
+      width: 100px;
+      height: 100px;
+      background-color: #eee;
+      background-image: url("img/unnamed.jpeg");
+      background-size: cover;
+      /* que cubra todo el div */
+      background-position: center;
+      /* centrada */
+    }
+
+    /* Formulario */
+    .formulario-contacto {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .formulario-contacto h2 {
+      font-size: 1.8rem;
+      margin-bottom: 1rem;
+    }
+
+    .form-row {
+      display: flex;
+      gap: 1rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .form-input,
+    .form-textarea {
+      background-color: white;
+      border: none;
+      padding: 0.8rem;
+      font-size: 1rem;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .form-input {
+      flex: 1;
+      min-width: 250px;
+    }
+
+    .form-textarea {
+      height: 180px;
+      resize: none;
+    }
+
+    .full-width {
+      width: 100%;
+    }
+
+    .mdc-button {
+      font-size: 1rem;
+      padding: 10px 24px;
+      border-radius: 6px;
+      border: none;
+    }
+
+    .mdc-button:focus {
+      outline: none;
+      /* Evita que aparezca contorno al recibir foco */
+      box-shadow: none;
+    }
+
+    .mdc-button--raised {
+      background-color: #eba200;
+      color: black;
+    }
+
+    .mdc-button--raised:hover {
+      background-color: #c08d20;
+      transform: translateY(0);
+    }
+
+    .mdc-button--raised:active {
+      background-color: #c08d20;
+      transform: translateY(2px);
+    }
+  </style>
+</head>
+
+<body>
+  <div id="header"></div>
+
+  <section class="contacto-visitanos">
+    <div class="contacto">
+      <h2>Contáctanos en:</h2>
+      <ul class="contact-list">
+        <li>
+          <span class="material-icons">email</span>
+          <div class="contact-item">GYM@gmail.com</div>
+        </li>
+        <li>
+          <span class="material-icons">facebook</span>
+          <div class="contact-item">/GYM.Oficial</div>
+        </li>
+        <li>
+          <span class="material-icons">
+            <i class="fab fa-instagram" class="material-icons"></i>
+          </span>
+          <div class="contact-item">@GYM</div>
+        </li>
+      </ul>
+    </div>
+
+    <div class="visitanos">
+      <h2>Visítanos en:</h2>
+      <div class="locations">
+        <div class="location">
+          <div class="location-box"></div>
+          <div class="location-name">
+            <strong>Sucursal Centro</strong>
+            <hr />
+            C. Progreso #81
+            <hr />
+            San Pedro, Zona Centro II
+            <hr />
+            31000 Chihuahua, Chih.
+            <hr />
+            +52 (614)177 79 76
+          </div>
+        </div>
+        <div class="location">
+          <div class="location-box"></div>
+          <div class="location-name">
+            <strong>Sucursal Norte</strong>
+            <hr />
+            Octavio Paz #169
+            <hr />
+            Complejo Industrial Chihuahua
+            <hr />
+            31136 Chihuahua, Chih.
+            <hr />
+            +52 (614)483 24 05
+          </div>
+        </div>
+        <div class="location">
+          <div class="location-box"></div>
+          <div class="location-name">
+            <strong>Sucursal Sur</strong>
+            <hr />
+            Perif. de la Juventud #3301
+            <hr />
+            Col. Puerta de Hierro
+            <hr />
+            31207 Chihuahua, Chih.
+            <hr />
+            +52 (614)306 33 97
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="formulario-contacto">
+    <h2>Formulario de contacto</h2>
+
+    <form>
+      <div class="form-row">
+        <input type="text" placeholder="Introduce tu nombre" class="form-input" />
+        <input type="text" placeholder="Introduce tu teléfono" class="form-input" />
+      </div>
+
+      <div class="form-row">
+        <input type="email" placeholder="Introduce tu mail" class="form-input full-width" />
+      </div>
+
+      <div class="form-row">
+        <textarea placeholder="Comentarios" class="form-input full-width full-height"></textarea>
+      </div>
+
+      <div class="form-row">
+        <button type="submit" class="mdc-button mdc-button--raised">
+          <span class="mdc-button__label">Enviar</span>
+        </button>
+      </div>
+
+      <!-- Mensaje de confirmación -->
+      <div id="mensaje-enviado"
+        style="display: none; color: white; background-color: #eba200; padding: 10px; margin-top: 10px; text-align: center; border-radius: 5px;">
+        ¡Mensaje enviado correctamente!
+      </div>
+
+
+
+
+    </form>
+  </section>
+  <footer>
+    <p>&copy; 2025 Gym - Marca Registrada </p>
+  </footer>
+
+  <script>
+    mdc.autoInit();
+  </script>
+  <script src="script.js"></script>
+  <script>
+    // Cargar el header
+    fetch("header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("header").innerHTML = data;
+      });
+  </script>
+</body>
+
+</html>
